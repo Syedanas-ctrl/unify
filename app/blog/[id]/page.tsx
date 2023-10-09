@@ -59,7 +59,6 @@ const BlogSidebarPage = ({
           <div className="flex w-full flex-col">
             <div className="prose max-w-none px-4 dark:prose-invert ">
               <h1>{blogsData?.title}</h1>
-              <h3>{blogsData?.description}</h3>
               <div
                 dangerouslySetInnerHTML={{ __html: blogsData?.content }}
               ></div>
