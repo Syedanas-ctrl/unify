@@ -25,17 +25,18 @@ const menuData: Menu[] = [
     path: "/blog",
     newTab: false,
   },
-  {
-    id: 40,
-    title: "Destinations",
-    path: "/blog?type=destination",
-    newTab: false,
-  },
+
   {
     id: 5,
     title: "Countries",
     newTab: false,
     submenu: [
+      {
+        id: 41,
+        title: "View All",
+        path: "/blog?type=destination",
+        newTab: false,
+      },
       {
         id: 41,
         title: "USA",

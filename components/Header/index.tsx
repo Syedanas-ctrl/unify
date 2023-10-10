@@ -106,7 +106,7 @@ const Header = () => {
                       <li key={menuItem?.id} className="group relative">
                         {menuItem?.path ? (
                           <Link
-                            href={menuItem?.path}
+                            href={menuItem?.path ?? ""}
                             className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {menuItem?.title}
@@ -141,6 +141,12 @@ const Header = () => {
                                   {submenuItem?.title}
                                 </Link>
                               ))}
+                              <Link
+                                href="/contact"
+                                className="ease-in-up block md:hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp block md:px-9 lg:px-6 xl:px-9"
+                              >
+                                Contact us
+                              </Link>
                             </div>
                           </>
                         )}

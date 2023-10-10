@@ -18,7 +18,6 @@ const Blog = () => {
     const fetchBlogs = async () => {
       const response = await getDocs(blogsReference);
       if (search) {
-
         setBlogsData(
           response.docs
             .map(
@@ -33,13 +32,15 @@ const Blog = () => {
         return;
       }
       setBlogsData(
-        response.docs.map(
-          (doc) =>
-            ({
-              ...doc.data(),
-              id: doc.id,
-            } as Blog)
-        )
+        response.docs
+          .map(
+            (doc) =>
+              ({
+                ...doc.data(),
+                id: doc.id,
+              } as Blog)
+          )
+          .filter((blog) => !blog?.type?.includes("destination"))
       );
     };
     fetchBlogs();
