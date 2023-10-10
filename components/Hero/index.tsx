@@ -16,7 +16,7 @@ const Hero = ({ showRegisterModal }: {showRegisterModal: any}) => {
                 <h1 className="mb-2 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Don’t just dream of studying abroad- make it happen with{" "}
                   <span className="text-primary dark:text-blue">
-                    Unify global education!
+                    Unify Global Education!
                   </span>
                 </h1>
                 <p className="mb-3 text-sm font-medium !leading-relaxed text-primary opacity-60 dark:text-primary dark:opacity-90">
@@ -35,7 +35,7 @@ const Hero = ({ showRegisterModal }: {showRegisterModal: any}) => {
                     onClick={showRegisterModal}
                     className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Get in Touch
+                    Get in Touch
                   </div>
                 </div>
               </div>
