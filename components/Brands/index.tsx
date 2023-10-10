@@ -51,6 +51,36 @@ const brandsData: Brand[] = [
     image: "/images/brands/ie.svg",
     link: "/blog?type=ireland",
   },
+  {
+    id: 9,
+    name: "TailAdmin",
+    image: "/images/brands/eu.svg",
+    link: "/blog?type=europe",
+  },
+  {
+    id: 10,
+    name: "TailAdmin",
+    image: "/images/brands/jp.svg",
+    link: "/blog?type=japan",
+  },
+  {
+    id: 11,
+    name: "TailAdmin",
+    image: "/images/brands/il.svg",
+    link: "/blog?type=israel",
+  },
+  {
+    id: 12,
+    name: "TailAdmin",
+    image: "/images/brands/kr.svg",
+    link: "/blog?type=south-korea",
+  },
+  {
+    id: 13,
+    name: "TailAdmin",
+    image: "/images/brands/ch.svg",
+    link: "/blog?type=switzerland",
+  },
 ];
 
 const Brands = () => {
