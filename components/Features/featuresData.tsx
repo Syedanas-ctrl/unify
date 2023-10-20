@@ -17,6 +17,7 @@ const featuresData: Feature[] = [
     title: "Global Perspective",
     paragraph:
       "Exposure to different cultures, languages, and ways of life fosters a broader and more global perspective, enhancing your understanding of the world.",
+    backgroundImage: "/images/backgrounds/globe.jpeg",
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const featuresData: Feature[] = [
     title: "Academic Excellence:",
     paragraph:
       "Many universities abroad are renowned for their academic excellence and offer specialized programs that may not be available in your home country.",
+      backgroundImage: "/images/backgrounds/academics.jpeg",
   },
   {
     id: 3,
@@ -49,6 +51,7 @@ const featuresData: Feature[] = [
     title: "Career Opportunities:",
     paragraph:
       "Studying abroad can open up international career opportunities, as employers often value the skills and experiences gained from living and studying in a foreign country.",
+      backgroundImage: "/images/backgrounds/career.jpeg",
   },
   {
     id: 4,
@@ -65,6 +68,7 @@ const featuresData: Feature[] = [
     title: "Language Proficiency",
     paragraph:
       "Immersion in a foreign language environment can significantly improve your language skills, making you more proficient and marketable in a global job market.",
+      backgroundImage: "/images/backgrounds/language.jpeg",
   },
   {
     id: 5,
@@ -81,6 +85,7 @@ const featuresData: Feature[] = [
     title: "Personal Growth",
     paragraph:
       "Living independently in a foreign country promotes personal growth, self-reliance, and adaptability, which are valuable life skills.",
+      backgroundImage: "/images/backgrounds/growth.jpeg",
   },
   {
     id: 6,
@@ -97,6 +102,7 @@ const featuresData: Feature[] = [
     title: "Network Building",
     paragraph:
       "You'll have the chance to build a global network of friends, professors, and professionals, which can be beneficial throughout your life and career.",
+      backgroundImage: "/images/backgrounds/network.jpeg",
   },
   {
     id: 7,
@@ -113,6 +119,7 @@ const featuresData: Feature[] = [
     title: "Global Citizenship",
     paragraph:
       "Studying abroad often fosters a sense of global citizenship and a commitment to making positive contributions to the world.",
+      backgroundImage: "/images/backgrounds/citizenship.jpeg",
   },
 ];
 export default featuresData;

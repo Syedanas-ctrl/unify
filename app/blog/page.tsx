@@ -7,6 +7,7 @@ import { db } from "../../firebase/config";
 import { collection, getDocs } from "firebase/firestore";
 import { Blog } from "@/types/blog";
 import { useSearchParams } from "next/navigation";
+import { countryCovers } from "@/components/Blog/country-covers";
 
 const Blog = () => {
   const searchParams = useSearchParams();
@@ -45,14 +46,14 @@ const Blog = () => {
     };
     fetchBlogs();
   }, [search]);
-
+  const background = Object.keys(countryCovers)?.includes((search || "").toLowerCase()) ? countryCovers?.[search?.toLowerCase() as keyof typeof countryCovers] : "";
   return (
     <>
       <Breadcrumb pageName="Blog Grid" description="Our blogs" />
 
-      <section className="pt-[120px] pb-[120px]">
+      <section style={{backgroundImage: `url(${background})`}} className="pt-[120px] mt-4 bg-cover bg-center bg-no-repeat pb-[120px] min-h-[800px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="-mx-4 flex flex-wrap justify-center gap-y-4">
             {blogsData?.map((blog) => (
               <div
                 key={blog.title}
