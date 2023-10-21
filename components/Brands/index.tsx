@@ -97,13 +97,18 @@ const Brands = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="wow fadeInUp grid grid-cols-1 md:grid-cols-3 items-center justify-center rounded-md bg-dark py-8 px-8 dark:bg-primary dark:bg-opacity-5 sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px]"
+              className="wow fadeInUp  rounded-md bg-dark py-8 px-8 dark:bg-primary dark:bg-opacity-5 sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px]"
               data-wow-delay=".1s
               "
             >
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
+              <p className="grayscale font-bold md:text-5xl text-4xl text-[#50d71e] mx-3 mb-6 md:text-center">
+                Study in
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">
+                {brandsData.map((brand) => (
+                  <SingleBrand key={brand.id} brand={brand} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
