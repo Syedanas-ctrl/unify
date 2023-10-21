@@ -65,12 +65,6 @@ const brandsData: Brand[] = [
     link: "/blog?type=japan",
   },
   {
-    id: 11,
-    name: "Israel",
-    image: "/images/brands/il.svg",
-    link: "/blog?type=israel",
-  },
-  {
     id: 12,
     name: "South Korea",
     image: "/images/brands/kr.svg",

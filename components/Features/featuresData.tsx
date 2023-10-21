@@ -68,7 +68,7 @@ const featuresData: Feature[] = [
     title: "Language Proficiency",
     paragraph:
       "Immersion in a foreign language environment can significantly improve your language skills, making you more proficient and marketable in a global job market.",
-      backgroundImage: "/images/backgrounds/language.jpeg",
+      backgroundImage: "/images/backgrounds/language.jpg",
   },
   {
     id: 5,
