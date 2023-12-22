@@ -26,6 +26,12 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 90,
+    title: "Are you an institution?",
+    path: "/institutions",
+    newTab: false,
+  },
+  {
     id: 5,
     title: "Countries",
     newTab: false,

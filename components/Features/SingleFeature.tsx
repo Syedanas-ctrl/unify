@@ -5,7 +5,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph } = feature;
   return (
     <div style={{backgroundImage: `url(${feature?.backgroundImage})`}} className={`w-full bg-cover`}>
-      <div className="wow fadeInUp p-6  backdrop-brightness-[0.30]" data-wow-delay=".15s">
+      <div className="wow fadeInUp p-6 h-full w-full backdrop-brightness-[0.30]" data-wow-delay=".15s">
         <div className="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-white bg-opacity-10 text-white">
           {icon}
         </div>

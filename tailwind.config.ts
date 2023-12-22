@@ -21,6 +21,7 @@ const config: Config = {
       primary: "#4A6CF7",
       yellow: "#FBB040",
       "body-color": "#959CB1",
+      "dark-gray": "rgb(51 65 85)",
       blue: "rgb(56 189 248)",
     },
     screens: {
