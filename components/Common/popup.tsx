@@ -51,8 +51,8 @@ const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
           </button>
         </div>
         <p className="text-xl font-semibold mx-6 text-black opacity-90">
-          "Are you a student or a professional? Fill out this form to get
-          started"
+          &quot;Are you a student or a professional? Fill out this form to get
+          started&quot;
         </p>
         <div className="flex justify-around shadow-lg mb-0.5">
           {["Individual", "Institution"].map((item) => (

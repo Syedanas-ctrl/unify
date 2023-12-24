@@ -84,7 +84,7 @@ const TestimonialsPage = () => {
               <br />
               Our Mission At UGE, our mission is to create a bridge between
               Indian educational institutions and global educational entities.
-              We're committed to shaping a world where students and educators
+              We&apos;re committed to shaping a world where students and educators
               benefit from diverse perspectives, innovative teaching methods,
               and collaborative initiatives that transcend borders.
               <br />
