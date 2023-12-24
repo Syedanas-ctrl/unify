@@ -1,12 +1,33 @@
 "use client";
 import { List } from "@/components/About/AboutSectionOne";
+import { db } from "@/firebase/config";
+import { collection, getDocs } from "firebase/firestore";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
-const TestimonialsPage = () => {
+const InstitutionsPage = () => {
+  const idReference = collection(db, "form");
+  const formIdInstitution = sessionStorage?.getItem("formIdInstitution");
+  const isFormIdInstitutionPresent =
+    formIdInstitution &&
+    formIdInstitution !== "undefined" &&
+    formIdInstitution !== "null";
+
+  useEffect(() => {
+    if (isFormIdInstitutionPresent) return;
+    const fetchFormId = async () => {
+      const response = await getDocs(idReference);
+      const formLinksArray = response?.docs?.map(
+        (doc) => doc?.data()?.formLink
+      );
+      sessionStorage.setItem("formIdInstitution", formLinksArray?.[0]);
+    };
+    fetchFormId();
+  }, []);
   return (
-    <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
-      <div className="container">
+    <section className="relative md:px-14 flex flex-col md:flex-row z-10 overflow-hidden pt-28 lg:pt-[150px]">
+      <div className="container md:w-[70%]">
         <div className="-mx-4 flex flex-wrap items-start">
           <div className="w-full px-4 md:w-8/12 lg:w-7/12">
             <div className="mb-8 md:mb-0 lg:mb-12">
@@ -47,8 +68,8 @@ const TestimonialsPage = () => {
             <Image
               src="/images/backgrounds/insthree.jpg"
               alt="uge"
-              width={600}
-              height={600}
+              width={500}
+              height={500}
               className="mx-auto max-w-full lg:mr-0"
             />
           </div>
@@ -73,8 +94,8 @@ const TestimonialsPage = () => {
                 <Image
                   src="/images/backgrounds/instwo.jpg"
                   alt="uge"
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                   className="mx-auto max-w-full lg:mr-0"
                 />
               </div>
@@ -84,9 +105,9 @@ const TestimonialsPage = () => {
               <br />
               Our Mission At UGE, our mission is to create a bridge between
               Indian educational institutions and global educational entities.
-              We&apos;re committed to shaping a world where students and educators
-              benefit from diverse perspectives, innovative teaching methods,
-              and collaborative initiatives that transcend borders.
+              We&apos;re committed to shaping a world where students and
+              educators benefit from diverse perspectives, innovative teaching
+              methods, and collaborative initiatives that transcend borders.
               <br />
               <br />
               <span className="font-bold text-2xl text-black opacity-80 dark:text-white dark:opacity-100">
@@ -116,8 +137,8 @@ const TestimonialsPage = () => {
                 <Image
                   src="/images/backgrounds/insone.jpg"
                   alt="uge"
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                   className="mx-auto max-w-full lg:mr-0"
                 />
               </div>
@@ -187,8 +208,26 @@ const TestimonialsPage = () => {
           </p>
         </section>
       </div>
+      <div className="md:w-[30%] px-4 bg-red-900">
+        {isFormIdInstitutionPresent && (
+          <>
+            <p className="text-3xl font-bold pb-6 whitespace-nowrap">
+              Get in Touch
+            </p>
+            <div className="w-full h-[1200px]">
+              <iframe
+                title="formIdInstitution"
+                className="w-full h-full"
+                src={formIdInstitution}
+              >
+                Loading…
+              </iframe>
+            </div>
+          </>
+        )}
+      </div>
     </section>
   );
 };
 
-export default TestimonialsPage;
+export default InstitutionsPage;

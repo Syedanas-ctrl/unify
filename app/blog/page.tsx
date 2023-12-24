@@ -20,28 +20,28 @@ const Blog = () => {
       const response = await getDocs(blogsReference);
       if (search) {
         setBlogsData(
-          response.docs
-            .map(
+          response?.docs
+            ?.map(
               (doc) =>
                 ({
-                  ...doc.data(),
-                  id: doc.id,
+                  ...doc?.data(),
+                  id: doc?.id,
                 } as Blog)
             )
-            .filter((blog) => blog?.type?.includes(search))
+            ?.filter((blog) => blog?.type?.includes(search))
         );
         return;
       }
       setBlogsData(
-        response.docs
-          .map(
+        response?.docs
+          ?.map(
             (doc) =>
               ({
-                ...doc.data(),
-                id: doc.id,
+                ...doc?.data(),
+                id: doc?.id,
               } as Blog)
           )
-          .filter((blog) => !blog?.type?.includes("destination"))
+          ?.filter((blog) => !blog?.type?.includes("destination"))
       );
     };
     fetchBlogs();
