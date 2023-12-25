@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import Whatsapp from "@/components/whatsapp";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+import { Bot } from "@/components/Bot/bot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <Bot />
           <Whatsapp />
         </Providers>
       </body>
