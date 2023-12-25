@@ -36,7 +36,6 @@ const Header = () => {
   };
 
   return (
-    <>
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
           sticky
@@ -101,7 +100,7 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block lg:flex lg:space-x-16">
                     {menuData.map((menuItem, index) => (
                       <li key={menuItem?.id} className="group relative">
                         {menuItem?.path ? (
@@ -170,7 +169,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-    </>
   );
 };
 

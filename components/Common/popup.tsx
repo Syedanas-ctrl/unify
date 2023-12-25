@@ -1,32 +1,8 @@
 "use client";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/firebase/config";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
-  const idReference = collection(db, "form");
-  const formIdIndividual = sessionStorage?.getItem("formIdIndividual");
-  const formIdInstitution = sessionStorage?.getItem("formIdInstitution");
-  const isFormIdIndividualPresent =
-    formIdIndividual &&
-    formIdIndividual !== "undefined" &&
-    formIdIndividual !== "null";
-  const isFormIdInstitutionPresent =
-    formIdInstitution &&
-    formIdInstitution !== "undefined" &&
-    formIdInstitution !== "null";
-
-  useEffect(() => {
-    if (isFormIdIndividualPresent && isFormIdInstitutionPresent) return;
-    const fetchFormId = async () => {
-      const response = await getDocs(idReference);
-      const formLinksArray = response?.docs?.map(
-        (doc) => doc?.data()?.formLink
-      );
-      sessionStorage.setItem("formIdIndividual", formLinksArray?.[1]);
-      sessionStorage.setItem("formIdInstitution", formLinksArray?.[0]);
-    };
-    fetchFormId();
-  }, []);
+  const formIdIndividual = process.env.NEXT_PUBLIC_STUDENT_FORM;
+  const formIdInstitution = process.env.NEXT_PUBLIC_INSTITUTION_FORM;
   const [personality, setPersonality] = useState("Individual/Student");
   return (
     <section
@@ -71,7 +47,7 @@ const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
             </button>
           ))}
         </div>
-        {personality === "Individual/Student" && isFormIdIndividualPresent && (
+        {personality === "Individual/Student" && (
           <iframe
             title="formIdIndividual"
             src={formIdIndividual}
@@ -81,7 +57,7 @@ const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
             Loading…
           </iframe>
         )}
-        {personality === "Institution" && isFormIdInstitutionPresent && (
+        {personality === "Institution" && (
           <iframe
             title="formIdInstitution"
             src={formIdInstitution}

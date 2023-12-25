@@ -16,7 +16,10 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you.
               </p>
-              <form action="https://formsubmit.co/unifyglobaledu@gmail.com" method="POST" >
+              <form
+                action="https://formsubmit.co/unifyglobaledu@gmail.com"
+                method="POST"
+              >
                 <div className="-mx-4 flex flex-wrap">
                   <div className="px-4">
                     <div className="mb-8">
@@ -50,8 +53,28 @@ const Contact = () => {
                       />
                     </div>
                   </div>
+                  <div className="px-4">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="phone"
+                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                      >
+                        Are you a student or an institution?
+                      </label>
+                      <select
+                        name="client type"
+                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                      >
+                        <option value="student">Student</option>
+                        <option value="institution">Institution</option>
+                      </select>
+                    </div>
+                  </div>
                   <div className="w-full px-4">
-                    <button type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                    <button
+                      type="submit"
+                      className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+                    >
                       Submit
                     </button>
                   </div>
