@@ -27,7 +27,7 @@ const menuData: Menu[] = [
   },
   {
     id: 90,
-    title: "For institutions",
+    title: "For an institution",
     path: "/institutions",
     newTab: false,
   },
