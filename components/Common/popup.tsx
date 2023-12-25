@@ -4,6 +4,11 @@ const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
   const formIdIndividual = process.env.NEXT_PUBLIC_STUDENT_FORM;
   const formIdInstitution = process.env.NEXT_PUBLIC_INSTITUTION_FORM;
   const [personality, setPersonality] = useState("Individual/Student");
+  const [loading, setLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setLoading(false);
+  };
   return (
     <section
       className={
@@ -53,6 +58,7 @@ const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
             src={formIdIndividual}
             width="375"
             height="733"
+            onLoad={handleIframeLoad}
           >
             Loading…
           </iframe>
@@ -63,10 +69,12 @@ const MidPopUp = ({ closeModal }: { closeModal: () => void }) => {
             src={formIdInstitution}
             width="375"
             height="733"
+            onLoad={handleIframeLoad}
           >
             Loading…
           </iframe>
         )}
+        {loading && <div className="bg-primary w-full h-full flex justify-center pt-12 text-2xl">Loading...</div>}
       </div>
     </section>
   );
