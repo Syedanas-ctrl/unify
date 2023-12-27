@@ -102,24 +102,6 @@ const InstitutionsPage = () => {
                 institutional growth.
               </p>
               <br />
-              <br />
-              <span className="font-bold text-2xl text-black opacity-80 dark:text-white dark:opacity-100">
-                The Team
-              </span>
-              <br />
-              <p>
-                We at Unify Global Education (UGE) believe in transforming
-                Institutions globally through collaboration model. With 14+
-                years of experience in International student recruitment across
-                the globe we understand every student and institutions needs of
-                be recognized globally. Unify Global Education is your gateway
-                to fostering meaningful partnerships between Indian educational
-                institutions and renowned international boards and universities.
-                We specialize in facilitating collaborations that enrich
-                educational experiences, foster global learning environments,
-                and open doors to limitless opportunities.
-              </p>
-              <br />
             </div>
             <div>
               <span className="font-bold text-2xl text-black opacity-80 dark:text-white dark:opacity-100">
