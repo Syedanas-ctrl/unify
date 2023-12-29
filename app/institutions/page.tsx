@@ -44,15 +44,15 @@ const InstitutionsPage = () => {
         </div>
         <section className="bg-cover bg-center bg-no-repeat">
           <div className="text-base font-medium leading-relaxed text-body-color text-justify pt-12 pb-32">
-          <div className="float-right ml-6 my-3">
-            <Image
-              src="/images/backgrounds/insthree.jpg"
-              alt="uge"
-              width={500}
-              height={500}
-              className="mx-auto max-w-full lg:mr-0"
-            />
-          </div>
+            <div className="float-right ml-6 my-3">
+              <Image
+                src="/images/backgrounds/insthree.jpg"
+                alt="uge"
+                width={500}
+                height={500}
+                className="mx-auto max-w-full lg:mr-0"
+              />
+            </div>
             <span className="font-bold text-2xl text-black opacity-80 dark:text-white dark:opacity-100">
               Services We Offer:
             </span>
@@ -82,11 +82,16 @@ const InstitutionsPage = () => {
               </span>
               <br />
               <p>
-                Our Mission At UGE, our mission is to create a bridge between
-                Indian educational institutions and global educational entities.
-                We&apos;re committed to shaping a world where students and
-                educators benefit from diverse perspectives, innovative teaching
-                methods, and collaborative initiatives that transcend borders.
+                We at Unify Global Education (UGE) believe in transforming
+                Institutions globally through collaboration model. With 14+
+                years of experience in International student recruitment across
+                the globe we understand every student and institutions needs of
+                be recognized globally. Unify Global Education is your gateway
+                to fostering meaningful partnerships between Indian educational
+                institutions and renowned international boards and universities.
+                We specialize in facilitating collaborations that enrich
+                educational experiences, foster global learning environments,
+                and open doors to limitless opportunities.
               </p>
               <br />
               <br />
